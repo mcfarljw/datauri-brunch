@@ -1,0 +1,32 @@
+{
+  "name": "datauri-brunch",
+  "version": "2.0.0",
+  "description": "Adds data uri format support to Brunch.",
+  "author": {
+    "name": "Joshua McFarland",
+    "email": "mcfarljw@gmail.com",
+    "url": "https://github.com/mcfarljw"
+  },
+  "license": "MIT",
+  "keywords": [
+    "brunchplugin",
+    "datauri"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcfarljw/datauri-brunch.git"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "async": "~2.1.0",
+    "lodash": "~4.17.0",
+    "loggy": "~0.3.0",
+    "mime-types": "~2.1.0"
+  },
+  "devDependencies": {
+    "chai": "~3.5.0",
+    "mocha": "~3.1.0"
+  }
+}
