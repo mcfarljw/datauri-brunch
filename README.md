@@ -10,7 +10,7 @@ Install the plugin via npm with `npm install --save-dev datauri-brunch`.
 module.exports = {
     plugins: {
         datauri: {
-            pattern: /\.(gif|jpg|png)/
+            pattern: /\.(gif|jpg|png|svg)/
         }
     }
 };
