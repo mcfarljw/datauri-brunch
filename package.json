@@ -1,6 +1,6 @@
 {
   "name": "datauri-brunch",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Adds data uri format support to Brunch.",
   "author": {
     "name": "Joshua McFarland",
