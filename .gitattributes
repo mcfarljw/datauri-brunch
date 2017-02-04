@@ -2,6 +2,7 @@
 *.gif binary
 *.jpg binary
 *.png binary
+*.svg binary
 
 # Text
 * text eol=lf
