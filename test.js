@@ -8,7 +8,7 @@ describe('DataUriPlugin', function() {
   it('should use gif, jpg and png file patterns by default',
     () => {
       const plugin = new Plugin();
-      const pattern = /\.(gif|jpg|png)/.toString();
+      const pattern = /\.(gif|jpg|png|svg)/.toString();
 
       expect(plugin.pattern.toString()).to.equal(pattern);
     }
@@ -81,6 +81,31 @@ describe('DataUriPlugin', function() {
           result.then(
             (data) => {
               expect(data.indexOf('data:image/png;base64,')).to.not.equal(-1);
+              resolve();
+            }
+          );
+        }
+      );
+    }
+  );
+
+  it('should compile svg files to data uri format',
+    () => {
+      const plugin = new Plugin();
+
+      return new Promise(
+        (resolve, reject) => {
+          const result = plugin.compile({path: 'test_files/turtle1.svg'});
+
+          result.catch(
+            (error) => {
+              reject(error);
+            }
+          );
+
+          result.then(
+            (data) => {
+              expect(data.indexOf('data:image/svg+xml;base64,')).to.not.equal(-1);
               resolve();
             }
           );

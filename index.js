@@ -10,7 +10,7 @@ class DataUriCompiler {
     this.config = lodash.defaultsDeep(
       lodash.cloneDeep(config && config.plugins && config.plugins.datauri || {}),
       {
-        pattern: /\.(gif|jpg|png)/
+        pattern: /\.(gif|jpg|png|svg)/
       }
     );
 
@@ -59,7 +59,7 @@ class DataUriCompiler {
 }
 
 DataUriCompiler.prototype.brunchPlugin = true;
-DataUriCompiler.prototype.pattern = /\.(gif|jpg|png)/;
+DataUriCompiler.prototype.pattern = /\.(gif|jpg|png|svg)/;
 DataUriCompiler.prototype.type = 'template';
 
 module.exports = DataUriCompiler;
